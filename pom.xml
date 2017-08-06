@@ -96,4 +96,6 @@
             </plugin>
         </plugins>
     </build>
+    <description>This provides Valve implementations to add response security 
+headers to container managed security on Apache Tomcat</description>
 </project>
