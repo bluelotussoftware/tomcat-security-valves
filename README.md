@@ -16,3 +16,4 @@ The binaries are deployed to Maven Central at the following coordinates:
   <version>1.0.0</version>
 </dependency>
 ```
+**NOTE:** The file should be installed in the Apache Tomcat **/lib/** directory to be available for all applications. This applies even if you are using an individual **context.xml** per project to enable it.
