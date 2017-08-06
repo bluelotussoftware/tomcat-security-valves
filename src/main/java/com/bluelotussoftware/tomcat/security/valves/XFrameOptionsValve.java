@@ -36,7 +36,7 @@ import org.apache.catalina.valves.ValveBase;
  * &lt;/valve&gt;
  * </pre>
  *
- * @author John Yeary <jyeary@bluelotussoftware.com>
+ * @author John Yeary
  * @version 1.0.0
  */
 public class XFrameOptionsValve extends ValveBase {

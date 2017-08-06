@@ -6,8 +6,10 @@
     <groupId>com.bluelotussoftware</groupId>
     <artifactId>tomcat-security-valves</artifactId>
     <name>Apache Tomcat Security Valves (tomcat-security-valves)</name>
+    <description>This provides Valve implementations to add response security 
+        headers to container managed security on Apache Tomcat</description>
     <url>https://github.com/bluelotussoftware/tomcat-security-valves</url>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <inceptionYear>2017</inceptionYear>
     <properties>
@@ -42,6 +44,11 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <scm>
+        <connection>scm:git:git://github.com/bluelotussoftware/tomcat-security-valves.git</connection>
+        <developerConnection>scm:git:ssh://github.com/bluelotussoftware/tomcat-security-valves.git</developerConnection>
+        <url>https://github.com/bluelotussoftware/tomcat-security-valves</url>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -49,8 +56,48 @@
             <version>8.5.16</version>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <!--
+                        <configuration>
+                            <keyname>${gpg.keyname}</keyname>
+                        </configuration>
+                        -->
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -96,6 +143,4 @@
             </plugin>
         </plugins>
     </build>
-    <description>This provides Valve implementations to add response security 
-headers to container managed security on Apache Tomcat</description>
 </project>
