@@ -4,6 +4,8 @@ This provides [Valve](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/ca
     <!-- These can be replaced with the org.apache.catalina.filters.HttpHeaderSecurityFilter. -->
     <!-- However it does not secure container-managed-security. You must use a Valve to handle that case. -->
 
+    <Valve className="com.bluelotussoftware.tomcat.security.valves.ReferrerPolicyValve" />
+    <Valve className="com.bluelotussoftware.tomcat.security.valves.StrictTransportSecurityValve" />
     <Valve className="com.bluelotussoftware.tomcat.security.valves.XContentTypeOptionsValve" />
     <Valve className="com.bluelotussoftware.tomcat.security.valves.XFrameOptionsValve" />
     <Valve className="com.bluelotussoftware.tomcat.security.valves.XSSProtectionValve" />

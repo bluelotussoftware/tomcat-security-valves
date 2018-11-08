@@ -9,12 +9,10 @@ import org.apache.catalina.valves.ValveBase;
 
 /**
  * <p>
- * This {@link Valve} is designed to add an
- * {@literal Referrer-Policy: strict-origin-when-cross-origin} header to the {@link Response}
- * object.</p>
+ * This {@link Valve} is designed to add an {@literal Referrer-Policy: strict-origin-when-cross-origin} header to the
+ * {@link Response} object.</p>
  * <p>
- * This is configured in the {@literal context.xml}, or {@literal server.xml}
- * file using the following syntax:</p>
+ * This is configured in the {@literal context.xml}, or {@literal server.xml} file using the following syntax:</p>
  * <pre>
  * &lt;valve&gt;
  *   &lt;class-name&gt;com.bluelotussoftware.tomcat.security.valves.ReferrerPolicyValve&lt;/class-name&gt;
@@ -29,8 +27,7 @@ public class ReferrerPolicyValve extends ValveBase {
     /**
      * {@inheritDoc}
      * <p>
-     * Adds {@literal Referrer-Policy: strict-origin-when-cross-origin} header to the
-     * {@link Response} object.</p>
+     * Adds {@literal Referrer-Policy: strict-origin-when-cross-origin} header to the {@link Response} object.</p>
      */
     @Override
     public void invoke(Request request, Response response) throws IOException, ServletException {
