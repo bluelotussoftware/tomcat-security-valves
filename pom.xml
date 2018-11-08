@@ -9,7 +9,7 @@
     <description>This provides Valve implementations to add response security
         headers to container managed security on Apache Tomcat</description>
     <url>https://github.com/bluelotussoftware/tomcat-security-valves</url>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <packaging>jar</packaging>
     <inceptionYear>2017</inceptionYear>
     <properties>
