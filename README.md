@@ -15,7 +15,7 @@ The binaries are deployed to Maven Central at the following coordinates:
 <dependency>
   <groupId>com.bluelotussoftware</groupId>
   <artifactId>tomcat-security-valves</artifactId>
-  <version>2.0.1</version>
+  <version>2.1.0</version>
 </dependency>
 ```
 **NOTE:** The file should be installed in the Apache Tomcat **/lib/** directory to be available for all applications. This applies even if you are using an individual **context.xml** per project to enable it.
