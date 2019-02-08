@@ -29,9 +29,7 @@ import org.apache.catalina.valves.ValveBase;
  * <p>
  * This is configured in the {@literal context.xml}, or {@literal server.xml} file using the following syntax:</p>
  * <pre>
- * &lt;valve&gt;
- *   &lt;class-name&gt;com.bluelotussoftware.tomcat.security.valves.JSecurityCheckNoCacheValve&lt;/class-name&gt;
- * &lt;/valve&gt;
+ *  {@literal <Valve className="com.bluelotussoftware.tomcat.security.valves.JSecurityCheckNoCacheValve" /> }
  * </pre>
  *
  * @author <a href="mailto:jyeary@bluelotussoftware.com">John Yeary</a>
