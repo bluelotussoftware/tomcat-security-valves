@@ -9,7 +9,7 @@ This provides [Valve](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/ca
     <Valve className="com.bluelotussoftware.tomcat.security.valves.XContentTypeOptionsValve" />
     <Valve className="com.bluelotussoftware.tomcat.security.valves.XFrameOptionsValve" />
     <Valve className="com.bluelotussoftware.tomcat.security.valves.XSSProtectionValve" />
-    <Valve class-name="com.bluelotussoftware.tomcat.security.valves.JSecurityCheckNoCacheValve"</>
+    <Valve className="com.bluelotussoftware.tomcat.security.valves.JSecurityCheckNoCacheValve" />
 ```
 The binaries are deployed to Maven Central at the following coordinates:
 ```
